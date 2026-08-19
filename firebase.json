@@ -3,9 +3,13 @@
     "public": ".",
     "ignore": [
       "firebase.json",
+      ".firebaserc",
       "firestore.rules",
       "firestore.indexes.json",
       "storage.rules",
+      "SETUP.md",
+      ".git/**",
+      ".gitignore",
       "**/.*",
       "**/node_modules/**"
     ]
