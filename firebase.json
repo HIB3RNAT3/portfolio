@@ -5,6 +5,7 @@
       "firebase.json",
       "firestore.rules",
       "firestore.indexes.json",
+      "storage.rules",
       "**/.*",
       "**/node_modules/**"
     ]
@@ -12,5 +13,8 @@
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }

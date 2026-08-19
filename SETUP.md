@@ -1,19 +1,10 @@
 # One-time setup
 
-Everything code-side is done. Two console switches and one login are on you —
-they require your Google account, so they can't be automated for you.
+Everything code-side is done. Firestore, Storage, Hosting, and Authentication
+are enabled in the console — the only thing left is logging the CLI in,
+which needs your Google account so it can't be automated for you.
 
-## 1. Enable Firestore
-
-[console.firebase.google.com](https://console.firebase.google.com) → project **godgabe** →
-Build → Firestore Database → **Create database** → Production mode → pick a region.
-
-## 2. Enable Google sign-in
-
-Same console → Build → Authentication → **Get started** → Sign-in method →
-enable **Google** → set a support email.
-
-## 3. Log in to the Firebase CLI
+## Log in to the Firebase CLI
 
 ```
 npx firebase-tools login
@@ -25,11 +16,11 @@ the deploy commands below will work without asking you to log in again.
 ## Deploy
 
 ```
-npx firebase-tools deploy --only firestore:rules   # push security rules
-npx firebase-tools deploy --only hosting            # push the site
+npx firebase-tools deploy --only firestore:rules,storage   # push security rules
+npx firebase-tools deploy --only hosting                    # push the site
 ```
 
-Or both at once: `npx firebase-tools deploy`.
+Or all at once: `npx firebase-tools deploy`.
 
 Live site after deploy: whatever URL Firebase Hosting prints (something like
 `https://godgabe.web.app`).
